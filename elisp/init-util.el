@@ -3,9 +3,9 @@
 ;(straight-use-package 'dash)
 ;(require 'subr-x)
 
-(straight-use-package 'exec-path-from-shell)
 
 (when (memq window-system '(mac ns x))
+	(straight-use-package 'exec-path-from-shell)
 	(require 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 ;(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
